@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    font-family: 'Merriweather', serif;
+    background-color: whitesmoke;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f9fafc;
+}
+.navbar__brand {
+    width: 100px;
+}
+/*if we use navbar__logo to resize img the img height:width ratio may change and image may look distorted thats why change in its immediate parent class*/
+/*after setting parent class we shall the change the navbar__logo class*/
+.navbar__logo {
+    width:100%;
+} 
+.nav__item {
+    background-image: linear-gradient(
+        to right,
+        #ff521f 0%,
+        #dd2476 51%,
+        #ff521f 100%);
+        color:cornsilk;
+        border:none;
+        padding:12px;
+        border-radius: 6px;
+        font-weight: 600;
+}
+.nav__item:hover {
+    background-position: right center;
+    border: 2px solid burlywood;
+    cursor: pointer;
+}
+@media (min-width:768px) {
+    .navbar{
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+}
+
+@media (min-width:1024px) {
+    .navbar__brand {
+        width: 150px; /*logo becomes big*/
+    }
+    .nav__item {
+        padding: 20px; /*button becomes big*/
+        font-size: 20px;
+    }
+}
